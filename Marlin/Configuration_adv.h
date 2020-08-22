@@ -1560,7 +1560,7 @@
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
   #define BABYSTEP_INVERT_Z false           // Change if Z babysteps should go the other way
   //#define BABYSTEP_MILLIMETER_UNITS       // Specify BABYSTEP_MULTIPLICATOR_(XY|Z) in mm instead of micro-steps
-  #define BABYSTEP_MULTIPLICATOR_Z  2       // (steps or mm) Steps or millimeter distance for each Z babystep //Ruslan
+  #define BABYSTEP_MULTIPLICATOR_Z  2      // (steps or mm) Steps or millimeter distance for each Z babystep //Ruslan
   #define BABYSTEP_MULTIPLICATOR_XY 1       // (steps or mm) Steps or millimeter distance for each XY babystep
 
   #define DOUBLECLICK_FOR_Z_BABYSTEPPING  // Double-click on the Status Screen for Z Babystepping. //Ruslan
@@ -1963,7 +1963,7 @@
  */
 #if EXTRUDERS > 1
   // Z raise distance for tool-change, as needed for some extruders
-  #define TOOLCHANGE_ZRAISE                 2 // (mm)
+  #define TOOLCHANGE_ZRAISE                 0 // (mm) //Ruslan
   //#define TOOLCHANGE_ZRAISE_BEFORE_RETRACT  // Apply raise before swap retraction (if enabled)
   //#define TOOLCHANGE_NO_RETURN              // Never return to previous position on tool-change
   #if ENABLED(TOOLCHANGE_NO_RETURN)
