@@ -1039,7 +1039,7 @@ void tool_change(const uint8_t new_tool, bool no_move/*=false*/) {
       // The newly-selected extruder XYZ is actually at...
       DEBUG_ECHOLNPAIR("Offset Tool XYZ by { ", diff.x, ", ", diff.y, ", ", diff.z, " }");
       current_position += diff;
-      
+
       // Tell the planner the new "current position"
       sync_plan_position();
 
@@ -1127,7 +1127,7 @@ void tool_change(const uint8_t new_tool, bool no_move/*=false*/) {
 
           #else
             // Move back to the original (or adjusted) position
-              DEBUG_POS("Move back", destination);
+            DEBUG_POS("Move back", destination);
 
             #if ENABLED(TOOLCHANGE_PARK)
               if (toolchange_settings.enable_park) do_blocking_move_to_xy_z(destination, destination.z, MMM_TO_MMS(TOOLCHANGE_PARK_XY_FEEDRATE));

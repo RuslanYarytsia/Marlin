@@ -132,7 +132,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "5"
+//#define CUSTOM_MACHINE_NAME "3D Printer"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -1362,8 +1362,8 @@
 
 #if ENABLED(LEVEL_BED_CORNERS)
   #define LEVEL_CORNERS_INSET_LFRB { 30, 30, 30, 30 } // (mm) Left, Front, Right, Back insets
-  #define LEVEL_CORNERS_HEIGHT      5.0   // (mm) Z height of nozzle at leveling points       //Ruslan
-  #define LEVEL_CORNERS_Z_HOP       0.1   // (mm) Z height of nozzle between leveling points //Ruslan
+  #define LEVEL_CORNERS_HEIGHT      0.1   // (mm) Z height of nozzle at leveling points       //Ruslan
+  #define LEVEL_CORNERS_Z_HOP       4.0   // (mm) Z height of nozzle between leveling points
   //#define LEVEL_CENTER_TOO              // Move to the center after the last corner
 #endif
 
@@ -1400,8 +1400,8 @@
   #define Z_SAFE_HOMING_Y_POINT Y_CENTER  // Y point for Z homing
 #endif
 
-// Homing speeds (mm/m)
-#define HOMING_FEEDRATE_XY (30*60) //Ruslan
+// Homing speeds (mm/min)
+#define HOMING_FEEDRATE_XY (50*60)
 #define HOMING_FEEDRATE_Z  (4*60)
 
 // Validate that endstops are triggered on homing moves
@@ -2289,7 +2289,7 @@
 // Use software PWM to drive the fan, as for the heaters. This uses a very low frequency
 // which is not as annoying as with the hardware PWM. On the other hand, if this frequency
 // is too low, you should also increment SOFT_PWM_SCALE.
-#define FAN_SOFT_PWM //Ruslan
+//#define FAN_SOFT_PWM
 
 // Incrementing this by 1 will double the software PWM frequency,
 // affecting heaters, and the fan if FAN_SOFT_PWM is enabled.
